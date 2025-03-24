@@ -75,28 +75,42 @@ FROM Sales.SalesOrderHeader
 GROUP BY YEAR(OrderDate);
 
 Tarih alanından YEAR() fonksiyonu ile yıl bilgisi ayrıştırılmış ve GROUP BY ile yıllık bazda toplam sipariş sayısı hesaplanmıştır.
-
 _______________________________________________________________________________________________________________________
-
-8.Sadece 5'ten Fazla Siparişi Olan Müşterileri Gösterin
-
+  
+8.Sadece beşten Fazla Siparişi Olan Müşterileri Gösterin
+  
 SELECT CustomerID, COUNT(SalesOrderID) AS OrderCount
 FROM Sales.SalesOrderHeader
 GROUP BY CustomerID
 HAVING COUNT(SalesOrderID) > 5;
 
 HAVING ifadesi, GROUP BY sonrası filtreleme yapmak için kullanılır. WHERE yerine kullanılmaz çünkü agregat fonksiyonlar sonrası süzme gerektirir.
-
-_____________________________________________________________________________________________________________________
-
+  
+_______________________________________________________________________________________________________________________
 9.Satıcılara Göre Toplam Satış Tutarı
-
 SELECT sp.SalesPersonID, SUM(soh.TotalDue) AS TotalSales
 FROM Sales.SalesOrderHeader soh
 JOIN Sales.SalesPerson sp ON soh.SalesPersonID = sp.BusinessEntityID
 GROUP BY sp.SalesPersonID;
 
 Satıcıların yaptığı toplam satışlar hesaplanmıştır. JOIN ile satış başlıkları ve satıcılar ilişkilendirilmiştir.
+
+_______________________________________________________________________________________________________________________
+
+10.Her Şehirdeki Müşteri Sayısını Bulun
+  
+SELECT a.City, COUNT(DISTINCT c.CustomerID) AS CustomerCount
+FROM Sales.Customer c
+JOIN Person.BusinessEntityAddress bea ON c.CustomerID = bea.BusinessEntityID
+JOIN Person.Address a ON bea.AddressID = a.AddressID
+GROUP BY a.City;
+
+Adres verileri ile müşteri bilgileri ilişkilendirilmiş ve şehir bazında benzersiz müşteri sayısı hesaplanmıştır.
+
+_______________________________________________________________________________________________________________________
+
+
+
 
 
 
