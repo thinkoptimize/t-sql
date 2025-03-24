@@ -13,19 +13,13 @@ Bu repo, **AdventureWorks** veritabanı üzerinde çeşitli **T-SQL sorguları**
 
 ## 📚 İçerik
 
-| Bölüm | Konu | Açıklama | Kodlar |
-|-------|------|----------|--------|
-| 1 | SELECT ile Temel Sorgular | Sütun seçimi, sabit değer, alias kullanımı | [📄 bolum1-temel-select.sql](bolum1-temel-select.sql) |
-| 2 | İlişkili Veriler ve Toplulaştırma İşlemleri | (JOIN işlemleri) ve veri üzerinde istatistiksel analiz yapma| [📄 bolum2-aggregate.sql](bolum2-aggregate.sql) |
-| 3 | CTE ve Window Fonksiyonları  | CTE ve Window Fonksiyonları | [📄 bolum3-CTE.sql](bolum3-CTE.sql) |
-| 4 | GROUP BY & HAVING | Gruplama, toplama fonksiyonları, filtreleme | [📄 bolum4-groupby-having.sql](bolum4-groupby-having.sql) |
-| 5 | Alt Sorgular | Subquery kullanımı (SELECT, WHERE, FROM içinde) | [📄 bolum5-subqueries.sql](bolum5-subqueries.sql) |
-| 6 | CASE Kullanımı | Koşullu ifadelerle dönüşler | [📄 bolum6-case.sql](bolum6-case.sql) |
-| 7 | String Fonksiyonları | CONCAT, LEFT, RIGHT, CHARINDEX vs. | [📄 bolum7-string-functions.sql](bolum7-string-functions.sql) |
-| 8 | Tarih Fonksiyonları | GETDATE, DATEPART, DATEDIFF gibi fonksiyonlar | [📄 bolum8-date-functions.sql](bolum8-date-functions.sql) |
-| 9 | CTE (Common Table Expression) | Geçici sanal tablolarla okuması kolay sorgular | [📄 bolum9-cte.sql](bolum9-cte.sql) |
-| 10 | Window Fonksiyonları | ROW_NUMBER, RANK, LEAD, LAG | [📄 bolum10-window-functions.sql](bolum10-window-functions.sql) |
-| 11 | Gelişmiş Senaryolar | Karışık örnekler, iş zekası perspektifi | [📄 bolum11-advanced-scenarios.sql](bolum11-advanced-scenarios.sql) |
+| Bölüm | Konu | Kodlar |
+|-------|------|--------|
+| 1 | SELECT ile Temel Sorgular  | [📄 bolum1-temel-select.sql](bolum1-temel-select.sql) |
+| 2 | İlişkili Veriler ve Toplulaştırma İşlemleri | [📄 bolum2-aggregate.sql](bolum2-aggregate.sql) |
+| 3 | CTE ve Window Fonksiyonları  | [📄 bolum3-CTE.sql](bolum3-CTE.sql) |
+| 4 | Saklı Yordamlar, İşlemler, Hata Yönetimi ve Performans   | [📄 bolum4-storedprocedure.sql](bolum4-storedprocedure.sql) |
+
 
 ---
 
