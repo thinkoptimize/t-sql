@@ -1,4 +1,4 @@
-# 📊 AdventureWorks ile SQL Öğreniyorum
+# 📊 AdventureWorks veritabanı ile t-SQL
 
 Bu repo, **AdventureWorks** veritabanı üzerinde çeşitli **T-SQL sorguları** ile SQL’i öğrenmek isteyenler için hazırlanmıştır. Her bölüm, gerçek dünya senaryolarıyla desteklenmiş sorgular içerir.
 
