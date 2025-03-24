@@ -87,6 +87,17 @@ HAVING COUNT(SalesOrderID) > 5;
 
 HAVING ifadesi, GROUP BY sonrası filtreleme yapmak için kullanılır. WHERE yerine kullanılmaz çünkü agregat fonksiyonlar sonrası süzme gerektirir.
 
+_____________________________________________________________________________________________________________________
 
-_______________________________________________________________________________________________________________________
+9.Satıcılara Göre Toplam Satış Tutarı
+
+SELECT sp.SalesPersonID, SUM(soh.TotalDue) AS TotalSales
+FROM Sales.SalesOrderHeader soh
+JOIN Sales.SalesPerson sp ON soh.SalesPersonID = sp.BusinessEntityID
+GROUP BY sp.SalesPersonID;
+
+Satıcıların yaptığı toplam satışlar hesaplanmıştır. JOIN ile satış başlıkları ve satıcılar ilişkilendirilmiştir.
+
+
+
 
