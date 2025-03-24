@@ -41,6 +41,8 @@ Bu repo, **AdventureWorks** veritabanı üzerinde çeşitli **T-SQL sorguları**
 Her türlü öneri, düzeltme ya da katkıya açığım!  
 İsterseniz `Issue` açabilir veya `Pull Request` gönderebilirsiniz.
 mail : thinkoptimize@yandex.com
+
+
 ---
 
 
