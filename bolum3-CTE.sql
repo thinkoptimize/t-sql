@@ -103,8 +103,74 @@ FROM Sales.SalesOrderDetail;
 
 Fiyatı aynı olan ürünler aynı sırada yer alır; sıra atlaması olmaz.
 
+_________________________________________________________________________________________________________
 
 9.Önceki Satırın Değerini Getirme (LAG)
+
+SELECT 
+    SalesOrderID, OrderDate, TotalDue,
+    LAG(TotalDue) OVER(ORDER BY OrderDate) AS PreviousOrderTotal
+FROM Sales.SalesOrderHeader;
+
+Her siparişin bir önceki sipariş tutarı getirilir. Bu, fark analizi için kullanışlıdır.
+
+_________________________________________________________________________________________________________
+
+10.Sonraki Satırın Değeri (LEAD)
+
+SELECT 
+    SalesOrderID, OrderDate, TotalDue,
+    LEAD(TotalDue) OVER(ORDER BY OrderDate) AS NextOrderTotal
+FROM Sales.SalesOrderHeader;
+
+Sonraki siparişin tahmini ya da karşılaştırması için kullanılır.
+
+_________________________________________________________________________________________________________
+
+11.Koşullu Toplam (SUM OVER)
+
+SELECT 
+    SalesOrderID, CustomerID, TotalDue,
+    SUM(TotalDue) OVER(PARTITION BY CustomerID) AS TotalSpentByCustomer
+FROM Sales.SalesOrderHeader;
+
+Müşteri bazında toplam sipariş tutarı, her satıra yazılmış olur.
+
+_________________________________________________________________________________________________________
+
+12.Zaman Serisi ile Kümülatif Toplam (Running Total)
+
+SELECT 
+    CustomerID, OrderDate, TotalDue,
+    SUM(TotalDue) OVER(PARTITION BY CustomerID ORDER BY OrderDate) AS RunningTotal
+FROM Sales.SalesOrderHeader;
+
+Her müşterinin zaman içinde yaptığı alışverişlerin birikimli toplamı hesaplanır.
+
+_________________________________________________________________________________________________________
+
+13.İlk Sipariş Tutarı ile Karşılaştırma
+
+SELECT 
+    CustomerID, OrderDate, TotalDue,
+    FIRST_VALUE(TotalDue) OVER(PARTITION BY CustomerID ORDER BY OrderDate) AS FirstOrderAmount
+FROM Sales.SalesOrderHeader;
+
+Her satıra müşterinin ilk sipariş tutarı eklenir. Zaman içindeki değişim gözlemlenir.
+
+_________________________________________________________________________________________________________
+
+14.Fiyat Farkı Hesaplama (Mevcut - Önceki)
+
+SELECT 
+    SalesOrderID, TotalDue,
+    TotalDue - LAG(TotalDue) OVER(ORDER BY OrderDate) AS ChangeFromPrevious
+FROM Sales.SalesOrderHeader;
+
+İki ardışık sipariş arasındaki fiyat farkı hesaplanır
+
+
+
 
 
 
