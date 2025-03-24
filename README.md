@@ -16,7 +16,7 @@ Bu repo, **AdventureWorks** veritabanı üzerinde çeşitli **T-SQL sorguları**
 | Bölüm | Konu | Açıklama | Kodlar |
 |-------|------|----------|--------|
 | 1 | SELECT ile Temel Sorgular | Sütun seçimi, sabit değer, alias kullanımı | [📄 bolum1-temel-select.sql](bolum1-temel-select.sql) |
-| 2 | İlişkili Veriler ve Toplulaştırma İşlemleri | [📄 bolum2-GROUPBY-HAVING-agregate.sql](bolum2-GROUPBY-HAVING-agregate.sql) |
+| 2 | İlişkili Veriler ve Toplulaştırma İşlemleri | [📄 bolum1-temel-select.sql](bolum1-temel-select.sql) |
 | 3 | JOIN’ler | INNER, LEFT, RIGHT JOIN örnekleri | [📄 bolum3-joins.sql](bolum3-joins.sql) |
 | 4 | GROUP BY & HAVING | Gruplama, toplama fonksiyonları, filtreleme | [📄 bolum4-groupby-having.sql](bolum4-groupby-having.sql) |
 | 5 | Alt Sorgular | Subquery kullanımı (SELECT, WHERE, FROM içinde) | [📄 bolum5-subqueries.sql](bolum5-subqueries.sql) |
