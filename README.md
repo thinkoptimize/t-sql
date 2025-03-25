@@ -21,6 +21,7 @@ Bu repo, **AdventureWorks** veritabanı üzerinde çeşitli **T-SQL sorguları**
 | 4 | Saklı Yordamlar, İşlemler, Hata Yönetimi ve Performans   | [📄 bolum4-storedprocedure.sql](bolum4-storedprocedure.sql) |
 | 5 | PIVOT,view, JSON, Dynamic SQL ve Fonksiyonlar   | [📄 bolum5-pivot.sql](bolum5-pivot.sql) |
 | 6 | Veri Erişimini İzleme (Audit ve Loglama)  | [📄 bolum6-log.sql](bolum6-log.sql) |
+| 7 | Çeşitli uygulamalar  | [📄 bolum7-genel.sql](bolum7-genel.sql) |
 
 
 
