@@ -20,6 +20,8 @@ Bu repo, **AdventureWorks** veritabanı üzerinde çeşitli **T-SQL sorguları**
 | 3 | CTE ve Window Fonksiyonları  | [📄 bolum3-CTE.sql](bolum3-CTE.sql) |
 | 4 | Saklı Yordamlar, İşlemler, Hata Yönetimi ve Performans   | [📄 bolum4-storedprocedure.sql](bolum4-storedprocedure.sql) |
 | 5 | PIVOT,view, JSON, Dynamic SQL ve Fonksiyonlar   | [📄 bolum5-pivot.sql](bolum5-pivot.sql) |
+| 6 | Veri Erişimini İzleme (Audit ve Loglama)  | [📄 bolum6-log.sql](bolum6-log.sql) |
+
 
 
 ---
